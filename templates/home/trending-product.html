@@ -58,7 +58,7 @@
           <div class="product__content product__content-2">
             <h6>
               <a href="product-details.html"
-                >Epple iPad Pro 10.5-inch Cellular 64G</a
+                >{{product.title | truncatewords:5}}</a
               >
             </h6>
             <div class="rating mb-5 mt-10">
@@ -82,7 +82,7 @@
               <span>(01 review)</span>
             </div>
             <div class="price">
-              <span>$105-$110</span>
+              <span>${{product.regular_price}}</span>
             </div>
           </div>
           <div class="product__add-cart text-center">

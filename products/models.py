@@ -74,4 +74,15 @@ class Product(models.Model):
         return self.title
     
     
+class ProductImage(models.Model):
+    image = models.ImageField(upload_to='product_img', height_field=None, width_field=None, max_length=None)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    upload_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return self.product.title
+    
+
+    
+
     
